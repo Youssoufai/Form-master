@@ -1,0 +1,56 @@
+:root {
+    --RED: hsl(0, 100%, 74%);
+    --GREEN: hsl(154, 59%, 51%);
+    --BLUE: hsl(248, 32%, 49%);
+    --DARK-BLUE: hsl(249, 10%, 26%);
+    --GRAYISH-BLUE: hsl(246, 25%, 77%);
+}
+
+button {
+    cursor: pointer;
+
+}
+
+button:hover {
+    box-shadow: 2px -2px, 2px -2px, 2px 3px var(--DARK-BLUE);
+    transition: .3s;
+}
+
+.then {
+    color: var(--GRAYISH-BLUE);
+}
+
+body {
+    background: url('./images/bg-intro-desktop.png');
+    background-color: var(--RED);
+    min-height: 100vh;
+    /*     display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.button {
+    background-color: var(--BLUE);
+    border: 1px solid var(--BLUE);
+}
+
+p {
+    color: var(--GRAYISH-BLUE);
+    cursor: pointer;
+}
+
+.attr {
+    background: var(--GREEN);
+    border: 1px solid var(---GREEN);
+}
+
+input {
+    height: 50px;
+}
+
+@media screen and (max-width:600px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+}
