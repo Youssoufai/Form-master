@@ -14,7 +14,7 @@
 
 <body class="d-flex h-100 align-items-center">
 
-  <div class="container">
+  <div class="container container-sm">
     <div class="row flex-sm-column align-items-center d-lg-flex flex-lg-row ">
       <div class="col">
         <h1 class="text-white"> Learn to code by watching others</h1>
@@ -25,12 +25,21 @@
       <div class="col">
         <button class="button w-100 mb-2 p-3 text-white rounded">Try it free 7 days <span class="then">then $20/mo.
             thereafter</span></button>
-        <form class="d-flex align-items-center flex-column p-4 bg-white rounded">
-          <input type="text" class="form-control mb-4" placeholder="First Name">
-          <input type="text" class="form-control mb-4" placeholder="Last Name">
-          <input type="text" class="form-control mb-4" placeholder="Email Address">
-          <input type="text" class="form-control mb-4" placeholder="Password">
-          <button type="submit" class="attr w-100  p-4  text-uppercase fw-bolder  rounded text-white mt-2">Claim your
+        <form novalidate class="d-flex align-items-center flex-column p-4 bg-white rounded">
+          <input required type="text" class="form-control mb-4" placeholder="First Name">
+          <span class="invalid-feedback text-end m-0 position-relative">First Name cannot be empty
+          </span>
+          <input required type="text" class="form-control mt-2  mb-4" placeholder="Last Name">
+          <span class="invalid-feedback text-end m-0 position-relative ">Last Name cannot be empty
+          </span>
+          <input required type="text" class="form-control mb-4" placeholder="Email Address">
+          <span class="invalid-feedback text-end m-0 position-relative">Looks like this is not an email
+          </span>
+          <input required type="text" class="form-control mb-4" placeholder="Password">
+          <span class="invalid-feedback text-end m-0 position-relative">Password cannot be empty
+          </span>
+          <button type="submit" class="attr w-100  p-4  text-uppercase fw-bolder  rounded text-white mt-2">Claim
+            your
             free
             trial</button>
           <p class="mt-3"> By clicking the button, you are agreeing to our <span class=" text-danger">Terms and
@@ -45,6 +54,15 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+  <script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (e) => {
+      if (!form.checkValidity()) {
+        e.preventDefault();
+      }
+      form.classList.add("was-validated")
+    });
+  </script>
 </body>
 
 </html>

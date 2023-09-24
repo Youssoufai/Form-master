@@ -54,3 +54,7 @@ input {
         flex-direction: column;
     }
 }
+
+.invalid-feedback {
+    transform: translate(-3px, -20px);
+}
